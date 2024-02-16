@@ -1,0 +1,95 @@
+﻿<Window x:Class="DiagramGenerator.GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Diagram Generator" Width="800" Height="500">
+
+    <Grid>
+        <!-- Column definitions -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Left Panel -->
+        <StackPanel Grid.Column="0" Margin="0">
+            <Menu>
+                <MenuItem Header="File"/>
+                <MenuItem Header="Data">
+                    <MenuItem Header="Sort by X" Click="SortXButton_Click"/>
+                    <MenuItem Header="Sort by Y" Click="SortYButton_Click"/>
+                </MenuItem>
+            </Menu>
+
+            <GroupBox Header="Settings" Margin="0,5,0,0">
+                <StackPanel>
+
+                    <!-- Diagram Title -->
+                    <StackPanel Orientation="Horizontal" Margin="5,0">
+                        <TextBlock Text="Diagram title" Width="110"/>
+                        <TextBox Width="140" Margin="5,0"/>
+                    </StackPanel>
+
+                    <!-- Spacing after the Diagram Title -->
+                    <Rectangle Height="20" Fill="Transparent"/>
+
+                    <!-- X-axis and Y-axis Texts -->
+                    <StackPanel Orientation="Horizontal" Margin="0,10" HorizontalAlignment="Right">
+                        <TextBlock Text="y-axis" Width="60" HorizontalAlignment="Right" Margin="0,0"/>
+                        <TextBlock Text="x-axis" Width="60" HorizontalAlignment="Right" Margin="0,0"/>
+                    </StackPanel>
+
+                    <!-- No. of Divisions -->
+                    <StackPanel Orientation="Horizontal" Margin="5,0">
+                        <TextBlock Text="No. of divisions" Width="110"/>
+                        <TextBox Width="60" HorizontalAlignment="Right" Margin="5,0" Name="yDivisionsTextBox"/>
+                        <TextBox Width="60" HorizontalAlignment="Right" Margin="5,0" Name="xDivisionsTextBox"/>
+                    </StackPanel>
+
+                    <!-- Interval Value -->
+                    <StackPanel Orientation="Horizontal" Margin="5,0">
+                        <TextBlock Text="Interval value" Width="110"/>
+                        <TextBox Width="60" HorizontalAlignment="Right" Margin="5,0" Name="xInput"/>
+                        <TextBox Width="60" HorizontalAlignment="Right" Margin="5,0" Name="yInput"/>
+                    </StackPanel>
+
+                    <!-- Ok and Cancel Buttons -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5,10">
+                        <Button Content="Ok" Width="90" Margin="5,0" Click="OkButton_Click"/>
+                        <Button Content="Cancel" Width="90" Margin="5,0"/>
+                    </StackPanel>
+
+                    <!-- Prompt Text -->
+                    <TextBlock Text="Press OK to start inputting points." HorizontalAlignment="Center" Margin="5,10,5,0"/>
+
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox Header="Add point" Margin="0,20,0,0">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="5,0">
+                        <TextBlock Text="x-coordinate" Width="110"/>
+                        <TextBox Width="60"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="5,0">
+                        <TextBlock Text="y-coordinate" Width="110"/>
+                        <TextBox Width="60"/>
+                    </StackPanel>
+                    <Button Content="OK" Margin="5,10"/>
+                </StackPanel>
+            </GroupBox>
+            <TextBlock Margin="10,0">Points</TextBlock>
+            <ListBox Margin="5" Name="pointsListBox">
+            </ListBox>
+        </StackPanel>
+
+        <!-- Right Panel/Drawing Area -->
+        <Border Grid.Column="1" Margin="10,10,10,50" BorderBrush="Black" BorderThickness="1" Background="White">
+            <Canvas Name="canvas">
+                <Polyline Points="10,380 200,280 400,200" Stroke="Blue" StrokeThickness="2"/>
+            </Canvas>
+        </Border>
+
+        <Button Content="Clear diagram" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
+

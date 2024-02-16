@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiagramGenerator.GUI", "DiagramGenerator.GUI.csproj", "{8EAFAD01-3BB9-4FC6-8969-C0E41D981CDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiagramGenerator.BLL", "..\DiagramGenerator.BLL\DiagramGenerator.BLL.csproj", "{94F4444B-C0CF-428C-9343-3A95FB5FF4EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8EAFAD01-3BB9-4FC6-8969-C0E41D981CDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EAFAD01-3BB9-4FC6-8969-C0E41D981CDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EAFAD01-3BB9-4FC6-8969-C0E41D981CDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EAFAD01-3BB9-4FC6-8969-C0E41D981CDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94F4444B-C0CF-428C-9343-3A95FB5FF4EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94F4444B-C0CF-428C-9343-3A95FB5FF4EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94F4444B-C0CF-428C-9343-3A95FB5FF4EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94F4444B-C0CF-428C-9343-3A95FB5FF4EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C16E6D9-31F7-4E53-B0AA-DC9E428F86EA}
+	EndGlobalSection
+EndGlobal
