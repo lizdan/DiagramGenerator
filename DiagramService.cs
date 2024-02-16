@@ -11,7 +11,6 @@ namespace DiagramGenerator.BLL
     public class DiagramService
     {
         private List<Point> _points = new List<Point>();
-        private List<Value> values = new List<Value>();
 
         // Add a point to the list
         public void AddPoint(Point point)
